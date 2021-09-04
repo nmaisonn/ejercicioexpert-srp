@@ -1,0 +1,54 @@
+[
+    {
+      "name": "Doctor",
+      "superclasses": "",
+      "subclasses": "",
+      "type": 1,
+      "responsibilities": [
+        "conocer la información del doctor"
+      ],
+      "collaborators": [
+        ""
+      ]
+    },
+    {
+      "name": "Paciente",
+      "superclasses": "",
+      "subclasses": "",
+      "type": 1,
+      "responsibilities": [
+        "-conoce la información del paciente"
+      ],
+      "collaborators": [
+        ""
+      ]
+    },
+    {
+      "name": "Consulta",
+      "superclasses": "",
+      "subclasses": "",
+      "type": 1,
+      "responsibilities": [
+        "conocer la fecha de la consulta ",
+        "conocer quien sera el doctor ",
+        "conocer quien sera  el paciente "
+      ],
+      "collaborators": [
+        "Doctor",
+        "Paciente",
+        ""
+      ]
+    },
+    {
+      "name": "ServicioConsulta",
+      "superclasses": "",
+      "subclasses": "",
+      "type": 1,
+      "responsibilities": [
+        "agregar consulta "
+      ],
+      "collaborators": [
+        "Consulta"
+      ]
+    }
+  ]
