@@ -10,7 +10,7 @@ tiene muchas responsabilidades.
    - Doctor: Su funcion es conocer los datos del doctor.
    - Paciente: Conocer los datos del paciente.
    - Consulta: Conoce la fecha de la consulta, quien será el doctor y el paciente.
-   - Servicio_Consulta: Administra las consultas.*/
+   - ServicioConsulta: Administra las consultas.*/
 {
     public class AppointmentService
     {
