@@ -2,6 +2,15 @@
 using System.Text;
 
 namespace Library
+/*- En primer lugar no cumple con el principio SRP ya que la clase AppointmentService 
+tiene muchas responsabilidades.
+ - Cumple con el patron Expert ya que tiene toda la información necesaria para realizar todas las 
+ responsabilidades pero estan mal asignadas.
+ - Para solucionar este problema se crearian las siguientes clases: 
+   - Doctor: Su funcion es conocer los datos del doctor.
+   - Paciente: Conocer los datos del paciente.
+   - Consulta: Conoce la fecha de la consulta, quien será el doctor y el paciente.
+   - Servicio_Consulta: Administra las consultas.*/
 {
     public class AppointmentService
     {
