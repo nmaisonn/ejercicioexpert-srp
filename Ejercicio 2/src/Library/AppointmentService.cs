@@ -1,41 +1,44 @@
 ﻿using System;
 using System.Text;
+using System.Collections.Generic;
 
 namespace Library
 {
     public class AppointmentService
     {
-        public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)
+        public static List<Appointment> appointments = new List<Appointment>();
+
+        public static void CreateAppointment(Appointment appointment)
         {
             StringBuilder stringBuilder = new StringBuilder("Scheduling appointment...\n");
             Boolean isValid = true;
 
-            if (string.IsNullOrEmpty(name))
+            if (string.IsNullOrEmpty(appointment.Patient.Name))
             {
                 stringBuilder.Append("Unable to schedule appointment, Name is required\n");
                 isValid = false;
             }
 
-            if (string.IsNullOrEmpty(id))
+            if (string.IsNullOrEmpty(appointment.Id))
             {
                 stringBuilder.Append("Unable to schedule appointment, id is required\n");
                 isValid = false;
             }
 
-            if (string.IsNullOrEmpty(phoneNumber))
+            if (string.IsNullOrEmpty(appointment.Patient.PhoneNumber))
             {
                 stringBuilder.Append("Unable to schedule appointment, Phone number is required\n");
                 isValid = false;
             }
 
-            if (string.IsNullOrEmpty(appoinmentPlace))
+            if (string.IsNullOrEmpty(appointment.AppointmentPlace))
             {
                 stringBuilder.Append("Unable to schedule appointment, Appoinment place is required\n");
                 isValid = false;
             }
 
             
-            if (string.IsNullOrEmpty(doctorName))
+            if (string.IsNullOrEmpty(appointment.Doctor.Name))
             {
                 stringBuilder.Append("Unable to schedule appointment, Doctor name is required\n");
                 isValid = false;
@@ -46,8 +49,8 @@ namespace Library
                 stringBuilder.Append("Appoinment Scheduled");
             }
 
-            return stringBuilder.ToString();
+            appointments.Add(appointment);
+            Console.WriteLine(stringBuilder.ToString());
         }
-
     }
 }
